@@ -9,15 +9,11 @@ const user = {
 	pw: 'spdlqj123!@',
 };
 
-//1. email 정규표현식을 사용한 validation
-emailInput.addEventListener('keyup', validation);
+//1. 정규표현식을 사용한 validation
+emailInput.addEventListener('keypress', validation);
+pwInput.addEventListener('keypress', validation);
 
-//2. pw 정규표현식을 사용한 validation
-pwInput.addEventListener('keyup', validation);
-
-//3. 상태 변수 관리
-
-//4. 로그인 버튼을 클릭시 조건처리
+//2. 로그인 버튼을 클릭시 조건처리
 form.addEventListener('submit', (event) => {
 	event.preventDefault();
 	login(emailInput.value, pwInput.value);
@@ -39,12 +35,12 @@ function validation(event) {
 	const value = event.target.value;
 	if (event.target === emailInput) {
 		emailReg(value)
-			? emailErrorMessage.classList.remove('is--invalid')
-			: emailErrorMessage.classList.add('is--invalid');
+			? emailInput.classList.remove('is--invalid')
+			: emailInput.classList.add('is--invalid');
 	} else {
 		pwReg(value)
-			? pwErrorMessage.classList.remove('is--invalid')
-			: pwErrorMessage.classList.add('is--invalid');
+			? pwInput.classList.remove('is--invalid')
+			: pwInput.classList.add('is--invalid');
 	}
 }
 
