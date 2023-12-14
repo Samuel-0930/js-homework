@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="./css/reset.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+		<link
+			rel="stylesheet"
+			href="./css/style.css" />
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script
+			src="./js/swiper.js"
+			defer></script>
+
+		<script
+			src="./js/data.js"
+			defer></script>
+		<script
+			src="./js/main.js"
+			defer></script>
+		<title>Elemental Movie Poster</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="nickName">EMBER</h1>
+			<div class="visual">
+				<!-- Slider main container -->
+				<div class="swiper">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide">
+							<div>
+								<img
+									src="./assets/ember.jpeg"
+									alt="엠버 포스터" />
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div>
+								<img
+									src="./assets/wade.jpeg"
+									alt="웨이드 포스터" />
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div>
+								<img
+									src="./assets/clod.jpeg"
+									alt="클로드 포스터" />
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div>
+								<img
+									src="./assets/gale.jpeg"
+									alt="게일 포스터" />
+							</div>
+						</div>
+					</div>
+					<!-- If we need pagination -->
+					<div class="swiper-pagination"></div>
+
+					<!-- If we need navigation buttons -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+
+					<!-- If we need scrollbar -->
+					<div class="swiper-scrollbar"></div>
+				</div>
+				<div>
+					<img
+						src="./assets/ember.jpeg"
+						alt="엠버 포스터"
+						class="visual-image" />
+				</div>
+			</div>
+
+			<nav class="nav">
+				<ul>
+					<li
+						class="is-active"
+						data-index="1">
+						<button>
+							<img
+								src="./assets/ember.jpeg"
+								alt="엠버 포스터" />
+						</button>
+					</li>
+					<li data-index="2">
+						<button>
+							<img
+								src="./assets/wade.jpeg"
+								alt="웨이드 포스터" />
+						</button>
+					</li>
+					<li data-index="3">
+						<button>
+							<img
+								src="./assets/clod.jpeg"
+								alt="클로드 포스터" />
+						</button>
+					</li>
+					<li data-index="4">
+						<button>
+							<img
+								src="./assets/gale.jpeg"
+								alt="게일 포스터" />
+						</button>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</body>
+</html>
