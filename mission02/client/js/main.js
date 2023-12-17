@@ -15,7 +15,6 @@ const nickName = document.querySelector('.nickName');
 
 function handleClick(e) {
 	const li = e.target.closest('li');
-	console.log(li);
 
 	if (!li) return;
 
