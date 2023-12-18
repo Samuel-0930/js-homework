@@ -25,17 +25,11 @@ function control(node) {
 
 	controlActive(node, index);
 	setBgColor(index);
-	setImage(index);
 	setNameText(index);
 }
 
 function setNameText(index) {
 	nickName.textContent = data[index].name;
-}
-
-function setImage(index) {
-	// visual.src = `./assets/${data[index].name}.jpeg`;
-	// visual.alt = data[index].alt;
 }
 
 function setBgColor(index) {
