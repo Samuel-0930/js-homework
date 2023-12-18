@@ -21,19 +21,6 @@ function handleClick(e) {
 	control(li);
 }
 
-function setBgColor(index) {
-	body.style.background = `linear-gradient(to bottom, ${data[index].color[0]},${data[index].color[1]})`;
-}
-
-function setImage(index) {
-	visual.src = `./assets/${data[index].name}.jpeg`;
-	visual.alt = data[index].alt;
-}
-
-function setNameText(index) {
-	nickName.textContent = data[index].name;
-}
-
 function control(node) {
 	const index = parseInt(node.getAttribute('data-index')) - 1;
 
@@ -41,6 +28,24 @@ function control(node) {
 	setBgColor(index);
 	setImage(index);
 	setNameText(index);
+}
+
+function setNameText(index) {
+	nickName.textContent = data[index].name;
+}
+
+function setImage(index) {
+	visual.src = `./assets/${data[index].name}.jpeg`;
+	visual.alt = data[index].alt;
+}
+
+function setBgColor(index) {
+	body.style.background = `linear-gradient(to bottom, ${data[index].color[0]},${data[index].color[1]})`;
+}
+
+function controlActive(node) {
+	removeActive();
+	addActive(node);
 }
 
 function removeActive() {
@@ -53,11 +58,6 @@ function removeActive() {
 
 function addActive(node) {
 	node.classList.add('is-active');
-}
-
-function controlActive(node) {
-	removeActive();
-	addActive(node);
 }
 
 nav.addEventListener('click', handleClick);
