@@ -7,7 +7,6 @@
 5. 함수 분리
 
 */
-
 const body = document.querySelector('body');
 const nav = document.querySelector('.nav');
 const visual = document.querySelector('.visual-image');
@@ -24,7 +23,7 @@ function handleClick(e) {
 function control(node) {
 	const index = parseInt(node.getAttribute('data-index')) - 1;
 
-	controlActive(node);
+	controlActive(node, index);
 	setBgColor(index);
 	setImage(index);
 	setNameText(index);
@@ -35,17 +34,17 @@ function setNameText(index) {
 }
 
 function setImage(index) {
-	visual.src = `./assets/${data[index].name}.jpeg`;
-	visual.alt = data[index].alt;
+	// visual.src = `./assets/${data[index].name}.jpeg`;
+	// visual.alt = data[index].alt;
 }
 
 function setBgColor(index) {
 	body.style.background = `linear-gradient(to bottom, ${data[index].color[0]},${data[index].color[1]})`;
 }
 
-function controlActive(node) {
+function controlActive(node, index) {
 	removeActive();
-	addActive(node);
+	addActive(node, index);
 }
 
 function removeActive() {
@@ -56,8 +55,9 @@ function removeActive() {
 	});
 }
 
-function addActive(node) {
+function addActive(node, index) {
 	node.classList.add('is-active');
+	swiper.slideTo(index);
 }
 
 nav.addEventListener('click', handleClick);
